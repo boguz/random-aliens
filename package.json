@@ -1,0 +1,39 @@
+{
+  "name": "random-aliens",
+  "version": "1.0.0",
+  "description": "An API that returns random alien profiles",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon src/server.ts",
+    "ts:build": "rm -rf ./dist && tsc",
+    "prestart": "npm run ts:build",
+    "start": "node dist/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boguz/random-aliens.git"
+  },
+  "keywords": [
+    "js",
+    "api",
+    "fake-profile",
+    "aliens",
+    "profile-generator"
+  ],
+  "author": "LuisPato",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/boguz/random-aliens/issues"
+  },
+  "homepage": "https://github.com/boguz/random-aliens#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.12",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
