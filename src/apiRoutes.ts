@@ -32,7 +32,7 @@ apiRouter.get('/', (req: Request, res: Response) => {
 apiRouter.get('/id/:id', (req: Request, res: Response) => {
 	const ids = req.params.id.split(',');
 	const result = aliens.filter((alien) => {
-		return ids.includes(alien.id.toString())
+		return ids.includes(alien.id.toString());
 	});
 	res.send(result);
 });
@@ -52,7 +52,7 @@ apiRouter.get('/random', (req: Request, res: Response) => {
  *  - otherwise return correct amount of random aliens
  */
 apiRouter.get('/random/:amount', (req: Request, res: Response) => {
-	let amount = +req.params.amount;
+	const amount = +req.params.amount;
 	
 	if (!amount || typeof amount !== 'number') {
 		return res.status(400).json({ status: 400, message: 'Incorrect amount'});
