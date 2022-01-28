@@ -2,7 +2,6 @@ import { AliensType } from './types.js';
 import path from 'path';
 
 const serverPath = path.join(__dirname, 'alien_avatars');
-console.log('XXXXX', serverPath);
 
 export const aliens: AliensType = [
 	{

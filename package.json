@@ -6,8 +6,8 @@
   "scripts": {
     "lint": "npx eslint src/**/*.ts",
     "dev": "nodemon src/server.ts",
-    "ts:build": "rm -rf ./dist && npm run lint && tsc",
-    "prestart": "npm run ts:build",
+    "build": "rm -rf ./dist && npm run lint && tsc",
+    "prestart": "npm run build",
     "start": "node dist/server.js"
   },
   "repository": {
