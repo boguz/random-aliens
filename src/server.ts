@@ -7,11 +7,11 @@ const PORT = 8000;
 const app = express();
 
 app.use(express.static('alien_avatars'));
-app.use(express.static('assets'));
+app.use(express.static('site'));
 
 app.get('/', (req, res) => {
 	console.log('SHOWING INDEX');
-	res.sendFile(__dirname + 'assets/index.html');
+	res.sendFile(__dirname + 'site/index.html');
 });
 
 /**
