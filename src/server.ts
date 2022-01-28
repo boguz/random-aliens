@@ -1,4 +1,4 @@
-import express from 'express';
+import express  from 'express';
 import './apiRoutes';
 import apiRouter from './apiRoutes';
 
@@ -7,6 +7,12 @@ const PORT = 8000;
 const app = express();
 
 app.use(express.static('alien_avatars'));
+app.use(express.static('assets'));
+
+app.get('/', (req, res) => {
+	console.log('SHOWING INDEX');
+	res.sendFile(__dirname + 'assets/index.html');
+});
 
 /**
  * Routes for the aliens
